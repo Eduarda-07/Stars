@@ -32,15 +32,13 @@ body{
     /* backdrop-filter: blur(7.5px); */
 }
 .logo{
- 
-    height: 18vh;
+    height: 25vh;
 }
 .logo h3{
     font-size: 5vh;
-    margin-left: 2vw;
+    align-items: center;
     color: #fcf4d9;
- 
-    margin-top:0;
+    
 }
 .login{
     background-color: #fcf4d9;
@@ -94,7 +92,7 @@ body{
     margin-top: 7vh;
     /* background-color: aqua; */
 }
-h3{
+/* h3{
     font-size: 2.5vh;
     margin-left: 22vw;
     margin-top: 2vh;
@@ -102,7 +100,7 @@ h3{
 h4{
     font-size: 3vh;
     margin-left: 17vw;
-}
+} */
 button{
     height: 6vh;
     width: 12vw;
