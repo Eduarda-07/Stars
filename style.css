@@ -11,6 +11,7 @@ body{
     display: flex;
     background-image: var(--imagem-fundo);
     background-repeat: no-repeat;
+    background-size: cover;
     /* align-items: center; */
     /* justify-content: center; */
 
@@ -33,12 +34,13 @@ body{
 }
 .logo{
     height: 25vh;
-}
-.logo h3{
-    font-size: 5vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+#estrela{
+    font-size: 4vh;
     color: #fcf4d9;
-    
 }
 .login{
     background-color: #fcf4d9;
@@ -69,7 +71,7 @@ body{
     font-size: 3vh;
     padding-left: 2vw;
     position: relative;
-    
+    margin-top: 1.5vw;
 }
 
 .senha{
@@ -78,29 +80,32 @@ body{
     border-radius: 2vh;
     background-color: #fcf4d9;
     margin-left: 2.5vw;
+    margin-top: 1.5vw;
     font-size: 3vh;
     padding-left: 2vw;
     padding-top: 1vh;
     position: relative;
 }
+
 .caixas img{
     margin-left: -5vw;
-    margin-top: 1vh;
+    margin-top: 4vh;
     position: absolute;
 }
 .caixas{
     margin-top: 7vh;
     /* background-color: aqua; */
 }
-/* h3{
-    font-size: 2.5vh;
-    margin-left: 22vw;
-    margin-top: 2vh;
+.caixasNew{
+    margin-top: 30vh;
+    /* background-color: aqua; */
 }
-h4{
-    font-size: 3vh;
-    margin-left: 17vw;
-} */
+.caixasNew img{
+    margin-left: -5vw;
+    margin-top: 4vh;
+    position: absolute;
+}
+
 button{
     height: 6vh;
     width: 12vw;
@@ -108,5 +113,36 @@ button{
     background-color: #E25949;
     border-radius: 1vh;
     font-size: 3vh;
-    margin-top: 13vh;
+    margin-top: 10vh;
+}
+a{
+    text-decoration: none;
+}
+.recuperarSenha{
+    margin-left: 22vw;
+    font-size: 2.5vh;
+    color: rgb(46, 46, 46);
+}
+.cadastroGo{
+    margin-left: 16.5vw;
+    font-size: 4vh;
+    color: #000000;
+}
+.recover{
+    background-color: #fcf4d9;
+    height: 13vh;
+    width: 24vw;
+    margin-left: 8vw;
+    margin-top: -5vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recover h2{
+    font-size: 5vh;
+    color: #000000;
+}
+.save{
+    margin-top: 20vh;
 }

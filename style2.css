@@ -1,0 +1,207 @@
+:root {
+    --imagem-fundo: url("./imgs/imagem1.png"); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    background-attachment: fixed; 
+    height: 100vh;
+    background-image: var(--imagem-fundo);
+    background-repeat: no-repeat;
+}
+
+.container{    
+    background-color: rgb(255, 255, 255, 50%);
+    height: 136vh;
+    width: 55vw;
+    margin-top: 15vh;
+    margin-left: 11vh;
+    border-radius: 3vh;
+    position: static;
+}
+
+.register{
+    background-color: #FBF6E6;
+    margin-top: -5vw;
+    height: 14vh;
+    width: 18vw;
+    margin-left: 18vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.register h2{
+    font-size: 6vh;
+    /*font-family: Sans Serif;*/
+}
+.logo{
+    height: 18vh;
+    width: 15vw;
+}
+.logo img{
+    height: 15vh;
+    width: 10vw;
+    margin-top: 3vh;
+    position: fixed;
+}
+
+.logo h3{
+    margin-top: 18vh;
+    font-size: 5vh;
+    margin-left: 2vw;
+    color: #FBF6E6;
+    position: fixed;
+}
+
+#nome{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 18vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+}
+
+#email{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 8vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+
+}
+
+#senha{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 8vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+
+}
+
+#premium{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 8vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+
+}
+
+#imagemPerfil{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 3vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+
+}
+
+.cont5 p{
+    font-size: 3vh;
+    color: black;
+    margin-left: 10vh;
+    margin-top: 5vh;
+}
+#senhaRecuperacao{
+    height: 8vh;
+    width: 45vw;
+    margin-top: 7vh;
+    margin-left: 9vh;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vw;
+
+}
+
+.icons{
+    margin-top: 10vh;
+    position: fixed;
+}
+
+.micro{
+   margin-left: 7vw;
+    margin-top: 1vh;
+
+}
+
+.teatro{
+    margin-left: 7vw;
+    margin-top: 25vh;
+}
+.conteudo{
+    display: flex;
+}
+.iconsD{
+    margin-top: 10vh;
+    margin-left: 4vw;
+}
+
+.ballet{
+    margin-left: 3vw;
+    margin-top: 20vh;
+    position: fixed;
+}
+
+.micro2{
+    margin-left: 3vw;
+     margin-top: 60vh;
+     position: fixed;
+}
+ 
+#botao{
+    height: 8vh;
+    width: 13vw;
+    background-color: #E25949;
+    font-size: 3vh;
+    margin-left: 21.5vw;
+    margin-top: 6vh;
+    border-radius: 1vh;
+}
+
+.login{
+    margin-left: 15vw;
+    width: 25vw;
+    margin-top: 5vh;
+    display: flex;
+   
+}
+.login h3{
+    font-size: 3vh;
+    color: #535151;
+}
+
+.login a{
+    font-size: 3vh;
+    color: black;
+    margin-left: 1vw;
+  
+}
+a{
+    text-decoration: none;
+}
+

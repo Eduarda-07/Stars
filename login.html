@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>STARS</title>
     <script src="./main.js" defer> </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="logo" id="logo">
         <img src="./imgs/christmasStar.png">
-        <h3> Stars </h3>
+        <a href="./login.html" id="estrela"> Stars </a>
     </div>
    
     <div class="container" id="container">
@@ -25,11 +25,13 @@
             <input id= 'senha' type="password" class="senha" placeholder="****************">
             <img src="./imgs/key.png">
         </div>
-        <h3>I forgot my password :(</h3>
+     
+         <a href="./recuperarSenha.html" class="recuperarSenha">I forgot my password :(</a>
 
         <!-- aqui o botão está chamando a função para verificar se esta tudo certo -->
-        <button id="login" onclick="login()"> Sign in</button>
-        <h4>Register</h3>
+        <button id="botaoLogin" onclick="login()"> Sign in</button>
+       
+            <a href="./cadastro.html" class="cadastroGo">Register</a>
     </div>
 </body>
 </html>
