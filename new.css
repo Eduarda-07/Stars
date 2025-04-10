@@ -23,10 +23,10 @@ body{
 }
 .container{
     background-color: rgb(255, 255, 255, 50%);
-    height: 75vh;
+    height: 45vh;
     width: 40vw;
     border-radius: 3vh;
-    margin-top: 16vh;
+    margin-top: 30vh;
     margin-left: 35vh;
     position: static;
     
@@ -42,37 +42,13 @@ body{
     font-size: 4vh;
     color: #FBF6E6;
 }
-.login{
-    background-color: #FBF6E6;
-    height: 13vh;
-    width: 17vw;
-    margin-left: 11vw;
-    margin-top: -5vw;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login h2{
-    font-size: 5vh;
-    color: #000000;
-}
+
 .caixas h3{
     padding-top: 6vh;
     font-size: 4vh;
     margin-left: 4vw;
 }
-.email{
-    height: 8vh;
-    width: 35vw;
-    border-radius: 2vh;
-    background-color: #FBF6E6;
-    margin-left: 2.5vw;
-    font-size: 3vh;
-    padding-left: 2vw;
-    position: relative;
-    margin-top: 1.5vw;
-}
+
 
 .senha{
     height: 8vh;
@@ -97,7 +73,7 @@ body{
     /* background-color: aqua; */
 }
 .caixasNew{
-    margin-top: 30vh;
+    margin-top: 10vh;
     /* background-color: aqua; */
 }
 .caixasNew img{
@@ -145,4 +121,19 @@ a{
 }
 .save{
     margin-top: 20vh;
+}
+
+.cadeado img{
+    height: 35vh;
+    width: 30vw;
+}
+.cadeado{
+    width: 40vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: -13vw;
+    position: absolute;
+  
 }

@@ -95,14 +95,15 @@ async function recuperacao(){
         body: JSON.stringify(data)
     }
 
+    // envia a o conteúdo para url
     const response = await fetch(url, options)
 
+    //pega a resposta da url para poder ver no console 
     const newResponse = await response.json()
     console.log(newResponse);
 
     // Armazenar no local Storage
-    localStorage(newResponse.id)
-    
+    localStorage.setItem("dadosId",newResponse.id)    
 
     if(response.status == 200){
         alert('Palavra verificada!')
@@ -114,13 +115,12 @@ async function recuperacao(){
     }
 
 }
-async function novaSenha(id){
-    const dados = await response.json()
+async function novaSenha(){
+    // const dados = await response.json()
    
-    //const dadosID = dados.id
-    console.log( dados);
+   const dadosIDNumber = localStorage.getItem("dadosId")
 
-    const url = `https://back-spider.vercel.app/user/newPassword/${id}`
+    const url = `https://back-spider.vercel.app/user/newPassword/${dadosIDNumber}`
 
     const password = document.getElementById('senha').value
     
@@ -136,9 +136,6 @@ async function novaSenha(id){
         body: JSON.stringify(data)
     }
     const response = await fetch(url,options)
-
-    // console.log(response);
-    console.log( dadosID);
 
     if(response.status == 200){
         alert('Senha atualizada com sucesso!')
