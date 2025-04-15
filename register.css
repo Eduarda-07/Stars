@@ -186,14 +186,12 @@ section{
     width: 13vw;
     background-color: #E25949;
     font-size: 3vh;
-    margin-left: 21.5vw;
     margin-top: 6vh;
     border-radius: 1vh;
+    margin-left: 4vw;
 }
 
 .login{
-    margin-left: 15vw;
-    width: 25vw;
     margin-top: 5vh;
     display: flex;
    
@@ -211,5 +209,11 @@ section{
 }
 a{
     text-decoration: none;
+}
+
+.navegar{
+    display: grid;
+    justify-content: center;
+    
 }
 

@@ -68,7 +68,7 @@ async function registrar(){
 
     if(response.status == 201){
         alert('Cadastro realizado com sucesso!')
-         window.location.href = "./login.html"
+         window.location.href = "./index.html"
 
     }else{
         alert('Cadastro inválido.')
@@ -140,7 +140,7 @@ async function novaSenha(){
     if(response.status == 200){
         alert('Senha atualizada com sucesso!')
 
-        window.location.href = "./login.html"
+        window.location.href = "./index.html"
         
     }else{
         alert('Não foi possível atualizar a senha')
