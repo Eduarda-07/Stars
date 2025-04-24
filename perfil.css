@@ -1,0 +1,266 @@
+:root{
+    --imagem-fundo: url("./imgs/image-star.png");
+}
+*{
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ ul, ol,li{
+    list-style-type:disc;
+
+}
+html{
+    height: 100vh;
+    width: 100%;
+}
+ 
+body{
+    height: 100%;
+    width: 100%;
+  
+    background-color: white;
+    /* justify-content: space-between; */
+   
+}
+ 
+header{
+    height: 13%;
+    width: 100%;
+    display: grid;
+    background-image: var(--imagem-fundo);
+    /* justify-content: space-between;
+    align-items: center; */
+    grid-template-columns: 0.1fr 1fr;
+    /* background-color: aquamarine; */
+}
+
+main{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    height: 100%;
+}
+.fundo img{
+    height: 100%;
+    width: 100%;
+    position: static;
+}
+.fundo {
+    position: static;
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.icons img{
+    width: 6vw;
+    height: 10vh;
+    margin-top: 2vh;
+}
+.icons{
+    /* position: absolute; */
+    height: 15vh;
+    display: flex;
+   
+}
+
+.ballet{
+    margin-left: 45vw;
+    
+}
+
+.micro{
+    margin-left: 6vw;
+}
+
+.teatro{
+    margin-left: 7vw;
+}
+
+.tango{
+    margin-left: 6vw;
+}
+
+
+.logo{
+    height: 25vh;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: absolute; */
+}
+
+.logo img{
+    height: 8vh;
+}
+
+#estrela{
+    font-size: 4vh;
+    color: #FBF6E6;
+}
+
+.esquerdo{
+    height: 100%;
+}
+.direito{
+    /* background-color: bisque; */
+    width: 100%;
+    display: grid;
+}
+.perfil img{
+    margin-top: 1vh;
+    height: 30vh;
+    width: 20vw;
+}
+.nome{
+    
+    width: 60vw;
+}
+.nome h2{
+    margin-top: 10vh;
+    font-size: 4vh;
+}
+
+.nome h3{
+    margin-top: 6vh;
+  
+    color: gray;
+    font-size: 2.5vh;
+}
+
+ul {
+    list-style-type: circle;
+   
+    font-size: 2.2vh;
+}
+
+.texto1{
+    margin-top: 3.6vh;
+    margin-left: 2vw;
+}
+
+.texto2{
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.nome2 {
+    color: gray;
+    font-size: 2vh;
+}
+
+
+
+.menu {
+    padding-top: 2vh;
+    margin-top: -95vh;
+    margin-left: 66vw;
+    /* background-color: #D95548; */
+    width: 12vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1.5Fr 1Fr ;
+}
+
+.destaque{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.destaque img{
+    height: 6vh;
+}
+
+.dados{
+    margin-top: 2vh;
+    width: 15vw;
+}
+
+.seguidores{
+    margin-left: 3vw;
+}
+
+.seguindo{
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
+.posts{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    width: 2vw;
+}
+
+#publicar{
+    width: 15vh;
+    height: 5vh;
+    color: white;
+    background-color: #D95548;
+    margin-top: 3.5vh;
+    margin-left: 3vw;
+    font-size: 2.5vh;
+}
+.publi{
+    width: 15vw;
+}
+
+.delet{
+    width: 15vw;
+}
+#deletar{
+    width: 15vh;
+    height: 5vh;
+    color: white;
+    background-color: #D95548;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    font-size: 2.5vh;
+}
+
+.post{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 35vw;
+    border: solid 0.2vh grey;
+    display: grid;
+    margin-right: 5vw;
+}
+.topo{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    padding-top: 2vh;
+}
+.perfilP{
+    height: 6vh;
+    width: 4vw;
+    margin-right: 2vh;
+}
+
+.postagens h2{
+    /* margin-top: 6vh;  */
+    font-family:Arial, Helvetica, sans-serif;
+}
+.postagens h3{
+    font-family:Arial, Helvetica, sans-serif;
+    color: gray;
+}  
+.foto img{
+    width: 31vw;
+}
+.enviar{
+    margin-left: 20vw;
+}
+.bottom img{
+    height: 4vh;
+}
+.postagens{
+    display: flex;
+}
+

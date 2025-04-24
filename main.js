@@ -1,12 +1,12 @@
 //serve para mostrar os erros oculotos no terminal
 "use strict"
 
-async function login(){
+async function login() {
     const url = `https://back-spider.vercel.app/login`
 
     const email = document.getElementById('email').value
     const password = document.getElementById('senha').value
-    
+
 
     const data = {
         email: email,
@@ -19,22 +19,29 @@ async function login(){
         },
         body: JSON.stringify(data)
     }
-    const response = await fetch(url,options)
+    const response = await fetch(url, options)
 
-    console.log(response);
+    const dataResponse = await response.json()
 
-    if(response.status == 200){
+    
+    console.log(dataResponse.user.id);
+
+    // Armazenar no local Storage
+    localStorage.setItem("dadosIdLogado", dataResponse.user.id)
+
+    if (response.status == 200) {
         alert('Login realizado com sucesso!')
 
-        window.location.href = "./home.html"
-        
-    }else{
+        window.location.href = "./perfil.html"
+        perfil()
+
+    } else {
         alert('Login ou senha invalida')
     }
 
 }
 
-async function registrar(){
+async function registrar() {
     const url = `https://back-spider.vercel.app/user/cadastrarUser`
 
     const nome = document.getElementById('nome').value
@@ -44,7 +51,7 @@ async function registrar(){
     const imagem = document.getElementById('imagemPerfil').value
     const recuperacao = document.getElementById('senhaRecuperacao').value
 
-    
+
 
     const data = {
         nome: nome,
@@ -62,26 +69,24 @@ async function registrar(){
         },
         body: JSON.stringify(data)
     }
-    const response = await fetch(url,options)
+    const response = await fetch(url, options)
 
-    console.log(response);
-
-    if(response.status == 201){
+    if (response.status == 201) {
         alert('Cadastro realizado com sucesso!')
-         window.location.href = "./index.html"
+        window.location.href = "./index.html"
 
-    }else{
+    } else {
         alert('Cadastro inválido.')
     }
 
 }
 
-async function recuperacao(){
+async function recuperacao() {
     const url = `https://back-spider.vercel.app/user/RememberPassword`
 
     const email = document.getElementById('email').value
     const password = document.getElementById('senha').value
-    
+
 
     const data = {
         email: email,
@@ -100,30 +105,30 @@ async function recuperacao(){
 
     //pega a resposta da url para poder ver no console 
     const newResponse = await response.json()
-    console.log(newResponse);
+    console.log(newResponse.id);
 
     // Armazenar no local Storage
-    localStorage.setItem("dadosId",newResponse.id)    
+    localStorage.setItem("dadosId", newResponse.id)
 
-    if(response.status == 200){
+    if (response.status == 200) {
         alert('Palavra verificada!')
 
         window.location.href = "./novaSenha.html"
-        
-    }else{
+
+    } else {
         alert('Palavra invalida')
     }
 
 }
-async function novaSenha(){
+async function novaSenha() {
     // const dados = await response.json()
-   
-   const dadosIDNumber = localStorage.getItem("dadosId")
+
+    const dadosIDNumber = localStorage.getItem("dadosId")
 
     const url = `https://back-spider.vercel.app/user/newPassword/${dadosIDNumber}`
 
     const password = document.getElementById('senha').value
-    
+
 
     const data = {
         senha: password
@@ -135,16 +140,43 @@ async function novaSenha(){
         },
         body: JSON.stringify(data)
     }
-    const response = await fetch(url,options)
+    const response = await fetch(url, options)
 
-    if(response.status == 200){
+    if (response.status == 200) {
         alert('Senha atualizada com sucesso!')
 
         window.location.href = "./index.html"
-        
-    }else{
+
+    } else {
         alert('Não foi possível atualizar a senha')
     }
+
+}
+
+async function perfil() {
+    const dadosIDNumber = localStorage.getItem("dadosIdLogado")
+    console.log(dadosIDNumber);
+
+    const url = `https://back-spider.vercel.app/user/pesquisarUser/${dadosIDNumber}`
+    
+    const data = await fetch(url)
+    const json = await data.json()
+
+    console.log(json);
+    alert(data)
+    
+
+
+
+}
+
+async function listarPublicacoes() {
+    const url = "https://back-spider.vercel.app/publicacoes/listarPublicacoes"
+
+}
+
+async function criarPublicacao() {
+    const url = ""
 
 }
 
