@@ -24,16 +24,19 @@ async function login() {
     const dataResponse = await response.json()
 
     
-    console.log(dataResponse.user.id);
+    console.log(dataResponse.user);
 
     // Armazenar no local Storage
     localStorage.setItem("dadosIdLogado", dataResponse.user.id)
+    
 
     if (response.status == 200) {
         alert('Login realizado com sucesso!')
 
+        // perfil()
+        // telaPerfil()
+
         window.location.href = "./perfil.html"
-        perfil()
 
     } else {
         alert('Login ou senha invalida')
@@ -160,25 +163,68 @@ async function perfil() {
     const url = `https://back-spider.vercel.app/user/pesquisarUser/${dadosIDNumber}`
     
     const data = await fetch(url)
-    const json = await data.json()
-
-    console.log(json);
-    alert(data)
-    
-
-
+    const json1 = await data.json()
+    telaPerfil(json1)
+    listarPublicacao(json1)
 
 }
 
-async function listarPublicacoes() {
+async function publicacoes() {
+    const dadosIDNumber = localStorage.getItem("dadosIdLogado")
     const url = "https://back-spider.vercel.app/publicacoes/listarPublicacoes"
+    const data = await fetch(url)
+    const json2 = await data.json()
+
+    // const id =  json2.idUsuario == dadosIDNumber
+    const publicacoesDoUsuario = json2.filter(pub => pub.idUsuario == dadosIDNumber);
+    listarPublicacao(id, json2)
+}
+
+async function listarPublicacao(publicacoes,json1, json2) {
+    
+    if (publicacoes) {
+        const perfil = document.getElementById('perfilP')
+        perfil.src = json1.imagemPerfil
+    
+        const nome = document.getElementById('h2')
+        nome.textContent = json2.nome
+    
+        const lugar = document.getElementById('lugar')
+        lugar.textContent = json2.local
+    
+        const foto = document.getElementById('foto')
+        const img = document.createElement('img')
+        foto.appendChild(img)
+    } else {
+        
+    }
+   
+
+}
+async function preencherPublicacoes() {
+    const fotos = await listarPublicacao()
+    fotos.forEach((foto) => listarPublicacao())
+}
+
+async function telaPerfil(json) {
+    const nomeH2 = document.getElementById('h2')
+
+
+    nomeH2.textContent = json.nome
+
+    const fotoDiv  = document.getElementById ('perfil')
+    
+    const img = document.createElement('img')
+
+    img.src = json.imagemPerfil
+
+    fotoDiv.appendChild(img)
 
 }
 
-async function criarPublicacao() {
-    const url = ""
+// window.onload = perfil;
 
-}
+perfil()
 
 
 
