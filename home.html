@@ -3,66 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="home.css">
     <script src="./main.js" defer></script>
-   
-    <title>STARS</title>
+
+    <title>Stars</title>
 </head>
 <body>
 
-    <div class="fundo">
-        <img src="./imgs/image 3.png">
-    </div> 
+    <header>
+        <nav class="menu-principal">
 
-    <div class="icons">
-
-        <div class="notificacoes">
-            <img src="./imgs/notificacoes.png">
-
-        </div>
-
-        <div class="chat">
-            <img src="./imgs/chat.png">
-
-        </div>
-
-        <div class="logo">
-            <img src="./imgs/christmasStar.png">
-            <a href="./perfil.html" id="estrela"> Stars</a>
-        </div>
-
-            <div class="story">
-                <img src="./imgs/addStory.png">
-            </div>
-
-        <div class="esquerda">
-
-            <div class="lupa">
-                <img src="./imgs/lupa.png">
-            </div>
-
-            <div class="camera">
-                <img src="./imgs/camera.png">
-            </div>
-
-            <div class="perfil">
-                <img src="./imgs/user.png">
-            </div>
-        </div>
-
-        <section class="corpo">
-            <div class="conteudos">
-                <div class="contEsquerda">
-                    <div class="item-destaque">
-                        <div class="perfil1">
-                            <img src="./imgs/aline.webp" alt="">
-                        </div>
-                        <p class="nomeUser">Aline</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+            <div class="menu-links">
+                <img src="./imgs/logo.png" class="logo">
+                <img src="./imgs/conta.png" class="logo" onclick="perfil()">
+                <img src="./imgs/camera (2).png" class="logo">
+                <input type="text" name="ms" class="busca-topo" placeholder="Pesquisa">
     
+                <div class="menu-icons">
+                    <img src="./imgs/notificacoes.png"  alt="">
+                    <img src="./imgs/chat.png" alt="">
+                    
+                </div>
+    
+            </div>
+        </nav>
+    
+    </header>
+
+    <main>
+
+        <section class="corpo-principal">
+            <div class="conteudo-geral">
+
+                <div class="coluna-esquerda">
+
+                    <div class="status-destaques">
+
+                        <div class="item-destaque">
+
+                            <div class="galeria" id="galeria">
+
+                        </div>
+
+                    </div>
+             </div> 
+
+                <!-- <div class="postagem">
+
+                    <div class="informacoes">
+
+                        <div class="usuario">
+                            <div class="miniatura-perfil">
+                                <img src="./img/mariajo.webp" alt="">
+                            </div>
+                            <p class="nome-do-usuario">MariaJo</p>
+                        </div>
+
+                        <img src="./img/tres-pontos.png" alt="" class="opcoes">
+
+                    </div>  -->
+
+                    <div class="fotoPost" id="fotoPost">
+
+                        <!-- <div class="tudoPostagem" id="tudoPostagem">
+
+
+                            <div class="conteudo-da-postagem">
+                            </div>
+        
+                        </div> -->
+                    </div>
+           
+                </div>
+
+    </section> 
+    </main>
+
 </body>
 </html>
