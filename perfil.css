@@ -255,7 +255,7 @@ ul {
     height: 7vh;
     width: 4vw;
     margin-right: 2vh;
-    background-color: blue;
+   
     border-radius: 30vw;
 }
 .perfilP img{
@@ -278,7 +278,7 @@ ul {
     width: 31vw;
 }
 .enviar{
-    margin-left: 20vw;
+    margin-left: 19vw;
 }
 .bottom img{
     height: 4vh;

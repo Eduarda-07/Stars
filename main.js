@@ -165,7 +165,6 @@ async function perfil() {
     const data = await fetch(url)
     const json1 = await data.json()
     telaPerfil(json1)
-    listarPublicacao(json1)
 
 }
 
@@ -177,33 +176,100 @@ async function publicacoes() {
 
     // const id =  json2.idUsuario == dadosIDNumber
     const publicacoesDoUsuario = json2.filter(pub => pub.idUsuario == dadosIDNumber);
-    listarPublicacao(id, json2)
+    listarPublicacao(publicacoesDoUsuario)
+    console.log(publicacoesDoUsuario, "aqui");
+    
 }
 
-async function listarPublicacao(publicacoes,json1, json2) {
+async function listarPublicacao(publicacoes) {
+    const container = document.getElementById('postagens')
     
-    if (publicacoes) {
-        const perfil = document.getElementById('perfilP')
-        perfil.src = json1.imagemPerfil
+    if (publicacoes && Array.isArray(publicacoes) && publicacoes.length > 0) {
     
-        const nome = document.getElementById('h2')
-        nome.textContent = json2.nome
-    
-        const lugar = document.getElementById('lugar')
-        lugar.textContent = json2.local
-    
-        const foto = document.getElementById('foto')
-        const img = document.createElement('img')
-        foto.appendChild(img)
-    } else {
+        container.replaceChildren('')
+
+        publicacoes.forEach(publicacao => {
+            // const lugar = document.getElementById('lugar')
+            // lugar.textContent = publicacoes[0].local
         
+            // const foto = document.getElementById('foto')
+            // foto.src = publicacoes[0].imagem
+
+            const post = document.createElement('div');
+            post.classList.add('post'); // Adiciona uma classe para facilitar a estilização (opcional)
+
+            const topo = document.createElement('div');
+            topo.classList.add('topo');
+
+
+            const lugar = document.createElement('h3');
+            lugar.textContent = publicacao.local;
+
+            const foto = document.createElement('div');
+            foto.classList.add('foto');
+
+            const fotoElement = document.createElement('img'); 
+            fotoElement.src = publicacao.imagem;
+          
+            const bottom = document.createElement('div');
+            bottom.classList.add('bottom');
+
+            const estrela = document.createElement('img'); 
+            estrela.src = './imgs/estrela.png';
+            estrela.classList.add('curtir')
+            bottom.appendChild(estrela)
+
+            const comentarios = document.createElement('img'); 
+            comentarios.src = './imgs/comentarios.png'
+            comentarios.classList.add('comentar')
+            bottom.appendChild(comentarios)
+
+            const enviar = document.createElement('img'); 
+            enviar.src = './imgs/enviar.png'
+            enviar.classList.add('enviar')
+            bottom.appendChild(enviar)
+
+            const salvar = document.createElement('img'); 
+            salvar.src = './imgs/savar.png'
+            salvar.classList.add('savar')
+            bottom.appendChild(salvar)
+
+            
+            foto.appendChild(fotoElement)
+            topo.appendChild(lugar);
+            post.appendChild(topo)
+            post.appendChild(foto);
+            post.appendChild(bottom);
+            container.appendChild(post);
+        })
+       
+       
+    } else {
+        console.log('erro ao listar publicações')
     }
    
 
 }
 async function preencherPublicacoes() {
-    const fotos = await listarPublicacao()
-    fotos.forEach((foto) => listarPublicacao())
+    // const fotos = await listarPublicacao()
+    // fotos.forEach((foto) => listarPublicacao())
+
+
+
+    const dadosIDNumber = localStorage.getItem("dadosIdLogado");
+    const url = `https://back-spider.vercel.app/publicacoes/listarPublicacoes`;
+
+    try {
+        const response = await fetch(url);
+        const publicacoes = await response.json();
+
+        const publicacoesDoUsuario = publicacoes.filter(pub => pub.idUsuario === dadosIDNumber);
+        listarPublicacao(publicacoesDoUsuario);
+        console.log(publicacoesDoUsuario);
+        
+    } catch (error) {
+        console.error('Erro ao obter publicações:', error);
+    }
 }
 
 async function telaPerfil(json) {
@@ -226,7 +292,5 @@ async function telaPerfil(json) {
 
 perfil()
 
-
-
-
+publicacoes()
 
