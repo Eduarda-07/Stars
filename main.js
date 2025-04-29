@@ -26,20 +26,16 @@ async function login() {
     
     console.log(dataResponse.user);
 
-    // Armazenar no local Storage
-    localStorage.setItem("dadosIdLogado", dataResponse.user.id)
-    
-
     if (response.status == 200) {
         alert('Login realizado com sucesso!')
-
-        // perfil()
-        // telaPerfil()
+         // Armazenar no local Storage
+    localStorage.setItem("dadosIdLogado", dataResponse.user.id)
 
         window.location.href = "./perfil.html"
 
     } else {
         alert('Login ou senha invalida')
+        console.log(alert)
     }
 
 }
